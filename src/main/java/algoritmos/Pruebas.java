@@ -9,7 +9,7 @@ public class Pruebas {
 
     public static void main(String[] args) {
         
-        int[] a = {5, 1, 3, 10, 6};
+        int[] a = {3, 4, 1, 2};
         Ordenamientos o = new Ordenamientos(a);
         
         o.bubbleSort();
