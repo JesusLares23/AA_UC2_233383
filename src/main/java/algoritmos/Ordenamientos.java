@@ -13,6 +13,10 @@ public class Ordenamientos {
         this.arr = arr;
     }
     
+    public void setArreglo(int[] arr) {
+        this.arr = arr;
+    }
+    
     /**
      * Algoritmo de ordenamiento de burbuja.
      * 
