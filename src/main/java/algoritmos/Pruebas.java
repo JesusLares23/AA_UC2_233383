@@ -17,7 +17,11 @@ public class Pruebas {
         o.bubbleSort();
         o.mostrar();
         
-        System.out.println("Algoritmo Selection Sort");
-        
+        System.out.printf("\nAlgoritmo Insertion Sort\n");
+        int[] b = {3, 4, 1, 2};
+        o.setArreglo(b);
+        o.mostrar();
+        o.insertionSort();
+        o.mostrar();
     }
 }

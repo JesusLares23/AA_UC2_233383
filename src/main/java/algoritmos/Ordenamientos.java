@@ -37,9 +37,22 @@ public class Ordenamientos {
         // 2n - 2 + 16n^2 - 16n + 16 + 8n^2 - 8n + 8 = 24n^2 - 22n + 22
     } // O(n^2)
     
+    public void insertionSort() {
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while(j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+    
     public void mostrar() {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + ", ");
         }
+        System.out.println("");
     } 
 }
