@@ -37,17 +37,25 @@ public class Ordenamientos {
         // 2n - 2 + 16n^2 - 16n + 16 + 8n^2 - 8n + 8 = 24n^2 - 22n + 22
     } // O(n^2)
     
+    /**
+     * Algoritmo de ordenamiento por inserción.
+     * 
+     * Entrada y precondición: un arreglo con elementos desordenados.
+     * Salida y postcondición: el mismo arreglo con sus elementos ordenados de 
+     * menor a mayot.
+     */
     public void insertionSort() {
-        for (int i = 1; i < arr.length; i++) {
-            int key = arr[i];
-            int j = i - 1;
-            while(j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j--;
+        for (int i = 1; i < arr.length; i++) { // asig: 1, comp = n, incr: n - 1 = 2n
+            int key = arr[i]; // n(sig: 1) = n
+            int j = i - 1; // n(rest: 2, asig; 1) = n(2 + 1) = 3n
+            while(j >= 0 && arr[j] > key) { // n(2n) = 2n^2
+                arr[j + 1] = arr[j]; // n^2(suma: 1, asig: 1) = 2n^2
+                j--; // n^2(decr: 1) = n^2
             }
-            arr[j + 1] = key;
+            arr[j + 1] = key; // n(suma: 1, asig: 1) = 2n
         }
-    }
+        // 2n + n + 3n + 2n^2 + 2n^2 + n^2 + 2n = 5n^2 + 8n
+    } // O(n^2)
     
     public void mostrar() {
         for (int i = 0; i < arr.length; i++) {
