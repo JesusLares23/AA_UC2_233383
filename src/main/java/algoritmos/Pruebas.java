@@ -23,5 +23,12 @@ public class Pruebas {
         o.mostrar();
         o.insertionSort();
         o.mostrar();
+        
+        System.out.printf("\nAlgoritmo Insertion Sort\n");
+        int[] c = {3, 4, 1, 2};
+        o.setArreglo(c);
+        o.mostrar();
+        o.selectionSort();
+        o.mostrar();
     }
 }

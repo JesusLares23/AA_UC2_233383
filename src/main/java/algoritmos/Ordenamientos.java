@@ -42,7 +42,7 @@ public class Ordenamientos {
      * 
      * Entrada y precondición: un arreglo con elementos desordenados.
      * Salida y postcondición: el mismo arreglo con sus elementos ordenados de 
-     * menor a mayot.
+     * menor a mayor.
      */
     public void insertionSort() {
         for (int i = 1; i < arr.length; i++) { // asig: 1, comp = n, incr: n - 1 = 2n
@@ -56,6 +56,29 @@ public class Ordenamientos {
         }
         // 2n + n + 3n + 2n^2 + 2n^2 + n^2 + 2n = 5n^2 + 8n
     } // O(n^2)
+    
+    /**
+     * Algoritmo de ordenamiento por selección.
+     * 
+     * Entrada y precondición: un arreglo de elemenentos de un mismo tipo de
+     * dato, comparables y desordenados.
+     * Salida y postcondición: Arreglo con los mismos elementos de la entrada,
+     * pero ordenados de menor a mayor.
+     */
+    public void selectionSort() {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int aux = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = aux;
+        }
+    }
     
     public void mostrar() {
         for (int i = 0; i < arr.length; i++) {
