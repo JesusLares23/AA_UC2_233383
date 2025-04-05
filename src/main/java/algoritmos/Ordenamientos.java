@@ -66,19 +66,20 @@ public class Ordenamientos {
      * pero ordenados de menor a mayor.
      */
     public void selectionSort() {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
+        int n = arr.length; // asig: 1
+        for (int i = 0; i < n - 1; i++) { // asig: 1, comp: n, incr: n - 1 = 2n
+            int minIndex = i; // n(asig: 1) = n
+            for (int j = i + 1; j < n; j++) { // n(asig+suma: 2, comp: n + 1, incr: n - 1) = 2n^2 + n
+                if (arr[j] < arr[minIndex]) { // n^2(comp: 1) = n^2
+                    minIndex = j; // n^2(asig: 1) = n^2
                 }
             }
-            int aux = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = aux;
+            int aux = arr[minIndex]; // n(asig: 1) = n
+            arr[minIndex] = arr[i]; // n(asig: 1) = n
+            arr[i] = aux; // n(asig: 1) = n
         }
-    }
+        // 1 + 2n + n + 2n^2 + n + n^2 + n^2 + n + n + n = 4n^2 + 7n + 1
+    } // O(n^2)
     
     public void mostrar() {
         for (int i = 0; i < arr.length; i++) {
